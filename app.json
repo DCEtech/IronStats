@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "BeastMode",
-    "slug": "BeastMode",
+    "name": "IronStats",
+    "slug": "IronStats",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/iron_stats_logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/iron_stats_logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,13 +17,22 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/iron_stats_logo.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.dcetech.IronStats"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/iron_stats_logo.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "16b43185-ab26-4522-bb44-0f8c42bd75d1"
+      }
     }
   }
 }
