@@ -1,7 +1,7 @@
 import { useSQLiteContext } from 'expo-sqlite';
-import {  getAllPRLifts, insertPR } from '../db/lifts_repository';
+import { getAllPRLifts, insertPR } from '../db/lifts_repository';
 import { useState, useEffect} from 'react';
-import {View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'react-native' 
+import { View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'react-native' 
 import DropDownPicker from 'react-native-dropdown-picker';
 
 export default function HistoricalPRsScreen () {
@@ -26,7 +26,7 @@ export default function HistoricalPRsScreen () {
             console.log("📊 Loaded lifts:", rows);
             setLifts(rows);
         }catch (error) {
-            console.error("Error charging data!", error);
+            console.error("❌ Error charging data!", error);
         }
     };
 
@@ -35,7 +35,7 @@ export default function HistoricalPRsScreen () {
             try{
                 await loadLifts();
             }catch (error) {
-                console.error("Error charging data!", error);
+                console.error("❌ Error charging data!", error);
             }
         })();
     }, []);
@@ -52,7 +52,7 @@ export default function HistoricalPRsScreen () {
             setWeight("");
             await loadLifts();
         }catch (error){
-            console.error("An error ocurred while adding data.", error);
+            console.error("❌ An error ocurred while adding data.", error);
         }  
     };
 

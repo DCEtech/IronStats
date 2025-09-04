@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "radon-ide",
+            "request": "launch",
+            "name": "Radon IDE panel",
+            "android": {},
+            "ios": {},
+            "env": {
+                "ANDROID_HOME": "/home/libertarian/Android/Sdk",
+                "ANDROID_SDK_ROOT": "/home/libertarian/Android/Sdk",
+                "PATH": "/home/libertarian/Android/Sdk/emulator:/home/libertarian/Android/Sdk/platform-tools:${env:PATH}"
+            }
+        }
+    ]
+}

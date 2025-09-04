@@ -3,15 +3,15 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import MainLayout from '../components/main_layout';
 import Icon from 'react-native-vector-icons/FontAwesome'; 
 
-
 export default function MenuScreen({ navigation }) {
     
     const items = [
         { title: 'Entrenamientos', icon: 'calendar', route: 'Entrenamientos' },
         { title: 'RM Teórica', icon: 'calculator', route: 'RM Teóricas' },
         { title: '1RM Hístorica', icon: 'history', route: '1RM Históricas' },
-        { title: 'Mejores Levantamientos', icon: 'trophy', route: 'Mejores Levantamientos' }
-    ];    
+        { title: 'Mejores Levantamientos', icon: 'trophy', route: 'Mejores Levantamientos' },
+        { title: 'Iron Vision RM', icon: 'video-camera', route: 'Iron Vision RM'}   
+      ];     
     
     return (
         <MainLayout>

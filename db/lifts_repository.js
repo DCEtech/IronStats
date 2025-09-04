@@ -30,4 +30,17 @@ export async function deleteBestLift(db, id) {
         `DELETE FROM best_lifts WHERE id = ?;`,
         [id]
     );
+}
+
+export async function getIronVisionLifts(db) {
+    return await db.getAllSync("SELECT * FROM iron_vision_rm");
+}
+
+export async function insertIronVisionLifts(db, exercise, teorical_weight){
+    return await db.Async(
+        `INSERT INTO iron_vision_rm (exercise, reps, weight)
+        VALUES (?, ?)
+        ONCONFLICT (exercise) DO UPDATE SET weight = excluded.weight;`,
+        [exercise, teorical_weight]
+    )
 } 

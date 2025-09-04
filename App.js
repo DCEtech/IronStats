@@ -8,6 +8,7 @@ import TrainingScreen from './screens/training_screen';
 import TeoricalPrsScreen from './screens/teorical_prs_screen';
 import HistoricalPrsScreen from './screens/historical_prs_screen';
 import BestLiftsScreen from './screens/bests_lifts_screen';
+import IronVisionRMScreen from './screens/iron_vision_rm_screen';
 
 const Stack = createNativeStackNavigator(); 
 
@@ -28,6 +29,7 @@ export default function App() {
           <Stack.Screen name="RM Teóricas" component = {TeoricalPrsScreen} options= {{ title: "RM Teóricas", headerStyle: { backgroundColor: '#14f4c0ff' }}}/>
           <Stack.Screen name="1RM Históricas" component = {HistoricalPrsScreen} options= {{ title: "1RM Hístoricas", headerStyle: { backgroundColor: '#14f4c0ff' }}}/>
           <Stack.Screen name="Mejores Levantamientos" component = {BestLiftsScreen} options= {{ title: "Mejores Levantamientos", headerStyle: { backgroundColor: '#14f4c0ff' }}}/>
+          <Stack.Screen name="Iron Vision RM" component = {IronVisionRMScreen} options= {{ title: "Iron Vision RM", headerStyle: { backgroundColor: '#14f4c0ff' }}}/>                                                                                                                                                                          
         </Stack.Navigator>   
       </NavigationContainer>
     </SQLiteProvider>

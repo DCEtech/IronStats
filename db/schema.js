@@ -19,6 +19,14 @@ export default async function InitDb(db) {
       );
     `);
 
+    await db.execAsync(`
+      CREATE TABLE IF NOT EXISTS iron_vision_rm (
+        id INTEGER PRIMARY KEY AUTOINCREMENT, 
+        exercise TEXT NOT NULL UNIQUE,
+        teorical_weight NUMERIC NOT NULL
+        );  
+    `);
+
     console.log("✅ Tables correctly created.");
     const rows = await db.getAllAsync("SELECT name FROM sqlite_master WHERE type='table'");
     console.log("📂 Existing tables:", rows);

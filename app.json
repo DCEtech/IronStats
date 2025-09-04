@@ -13,9 +13,14 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dcetech.IronStats"
     },
     "android": {
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/iron_stats_logo.png",
         "backgroundColor": "#ffffff"
@@ -27,7 +32,8 @@
       "favicon": "./assets/iron_stats_logo.png"
     },
     "plugins": [
-      "expo-sqlite"
+      "expo-sqlite",
+      "react-native-vision-camera"
     ],
     "extra": {
       "eas": {

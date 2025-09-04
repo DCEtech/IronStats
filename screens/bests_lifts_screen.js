@@ -19,7 +19,7 @@ export default function BestLiftsScreen () {
             console.log("Loaded best lifts", rows)
             setLifts(rows)
         }catch (error){
-            console.log("Error charging data!", error);
+            console.log("❌ Error charging data!", error);
         }
     }
 
@@ -28,7 +28,7 @@ export default function BestLiftsScreen () {
             try{
                 await loadLifts();
             }catch (error) {
-                console.error("Error charging data!", error);
+                console.error("❌ Error charging data!", error);
             }
         })();
     }, []);
@@ -51,7 +51,7 @@ export default function BestLiftsScreen () {
 
             await loadLifts();
         }catch (error){
-            console.log("An error ocurred while adding data!", error)
+            console.log("❌ An error ocurred while adding data!", error)
         }
     };
 
@@ -60,13 +60,13 @@ export default function BestLiftsScreen () {
             await deleteBestLift(db, exercise)
             await loadLifts()
         }catch (error){
-            console.log("Error delete item:", error)
+            console.log("❌ Error delete item:", error)
         }
     }
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Mejores Levantameintos. </Text>
+            <Text style={styles.title}>Mejores Levantameintos</Text>
 
             <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
                 <Text>+ añadir levantamiento</Text>
@@ -93,7 +93,6 @@ export default function BestLiftsScreen () {
                 transparent={true}
                 animationType="slide"
                 onRequestClose={() => setModalVisible(false)}
-                style={styles.modal}
             >
                 <View style={styles.modalOverlay}>
                     <View style={styles.modalContent}>
@@ -217,11 +216,11 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(0,0,0,0.5)",
     },
     modalContent: {
-        width: "80%",       // ancho más pequeño
+        width: "80%",       
         padding: 20,
         backgroundColor: "#495E57",
         borderRadius: 10,
-        elevation: 5,       // sombra Android
+        elevation: 5,       
         shadowColor: "#000", 
         shadowOpacity: 0.3,
         shadowRadius: 5,
